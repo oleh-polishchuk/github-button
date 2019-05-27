@@ -1,0 +1,32 @@
+{
+    "name": "Github PR Button",
+    "version": "1.0",
+    "description": "Injects Github PR button into Asana task pane toolbar.",
+    "icons": {
+        "48": "icon-48.png",
+        "128": "icon-128.png"
+    },
+    "manifest_version": 2,
+    "background": {
+        "scripts":["background.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://app.asana.com/*"
+            ],
+            "css": [
+                "style.css"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        "multimedia.mp3"
+    ],
+    "permissions": [
+        "tabs"
+    ]
+}
